@@ -1,10 +1,10 @@
 ﻿
 using MongoDB.Driver;
-using OpenBankingArgentinaAPI.Models;
+using OpenBankingArgentinaApi.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenBankingArgentinaAPI.Services
+namespace OpenBankingArgentinaApi.Services
 {
     public class AccountService
     {

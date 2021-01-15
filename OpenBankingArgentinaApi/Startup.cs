@@ -6,6 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using OpenBankingArgentinaApi.Models;
+using OpenBankingArgentinaApi.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +33,7 @@ namespace OpenBankingArgentinaApi
             services.Configure<DatabaseSettings>(
                 Configuration.GetSection(nameof(DatabaseSettings)));
 
-            services.AddSingleton<DatabaseSettings>(sp =>
+            services.AddSingleton<IDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
             services.AddSingleton<TransactionService>();
             services.AddSingleton<AccountService>();
