@@ -22,7 +22,7 @@ namespace OpenBankingArgentinaApi.Models
 
     public class ThisAccount
     {
-        public string id { get; set; }
+        public string id_this { get; set; }
         public BankRouting bank_routing { get; set; }
         public List<AccountRouting> account_routings { get; set; }
         public List<Holder> holders { get; set; }
@@ -36,7 +36,7 @@ namespace OpenBankingArgentinaApi.Models
 
     public class OtherAccount
     {
-        public string id { get; set; }
+        public string id_other { get; set; }
         public Holder holder { get; set; }
         public BankRouting bank_routing { get; set; }
         public List<AccountRouting> account_routings { get; set; }
@@ -66,7 +66,9 @@ namespace OpenBankingArgentinaApi.Models
 
     public class Transaction
     {
-        public string id { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
         public ThisAccount this_account { get; set; }
         public OtherAccount other_account { get; set; }
         public Details details { get; set; }
