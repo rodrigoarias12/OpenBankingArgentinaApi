@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBankingArgentinaApi", "OpenBankingArgentinaApi\OpenBankingArgentinaApi.csproj", "{64409AB0-D301-4EE9-9589-7A8A36165B36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64409AB0-D301-4EE9-9589-7A8A36165B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64409AB0-D301-4EE9-9589-7A8A36165B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64409AB0-D301-4EE9-9589-7A8A36165B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64409AB0-D301-4EE9-9589-7A8A36165B36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {952DA58F-7528-48DB-9E33-64E39D54FD18}
+	EndGlobalSection
+EndGlobal
