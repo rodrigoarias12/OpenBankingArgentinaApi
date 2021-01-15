@@ -452,6 +452,9 @@ $RECYCLE.BIN/
 *.pubxml
 *.publishproj
 
+OpenBankingArgentinaApi/Properties/PublishProfiles/OpenBankApiArgentina - Web Deploy.pubxml
+**/OpenBankingArgentinaApi/Properties/PublishProfiles/OpenBankApiArgentina - Web Deploy.pubxml
+*/OpenBankingArgentinaApi/Properties/PublishProfiles/OpenBankApiArgentina - Web Deploy.pubxml
 OpenBankingArgentinaApi/Properties/ServiceDependencies/OpenBankApiArgentina - Web Deploy/profile.arm.json
 **/OpenBankingArgentinaApi/Properties/ServiceDependencies/OpenBankApiArgentina - Web Deploy/profile.arm.json
 */OpenBankingArgentinaApi/Properties/ServiceDependencies/OpenBankApiArgentina - Web Deploy/profile.arm.json
