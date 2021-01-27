@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenBankingArgentinaApi</name>
+    </assembly>
+    <members>
+        <member name="T:OpenBankingArgentinaApi.Controllers.AccountController">
+            <summary>
+            Accceso a los datos de una cuenta
+            </summary>
+        </member>
+        <member name="M:OpenBankingArgentinaApi.Controllers.AccountController.Get">
+             <summary>
+             Get account details
+             </summary>
+             /// <remarks>
+             Descripción
+            
+                 GET /Account
+                 Obtener información de la cuenta 
+            
+             </remarks>
+             <returns>Account</returns>
+        </member>
+        <member name="T:OpenBankingArgentinaApi.Controllers.TransactionController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OpenBankingArgentinaApi.Controllers.TransactionController.#ctor(OpenBankingArgentinaApi.Services.TransactionService)">
+            <summary>
+            aaaaaaaaaaa
+            </summary>
+            <param name="transactionService"></param>
+        </member>
+        <member name="M:OpenBankingArgentinaApi.Controllers.TransactionController.Get">
+            <summary>
+            Get account transactions
+            </summary>
+        </member>
+    </members>
+</doc>

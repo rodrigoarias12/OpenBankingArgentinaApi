@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,6 +59,7 @@ namespace OpenBankingArgentinaApi.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         public string label { get; set; }
+        [JsonProperty("Numero de cuenta")]
         public string number { get; set; }
         //public Dictionary<string,Owner> owners { get; set; }
         public string product_code { get; set; }

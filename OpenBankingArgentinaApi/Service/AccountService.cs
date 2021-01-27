@@ -17,9 +17,9 @@ namespace OpenBankingArgentinaApi.Services
 
             _books = database.GetCollection<Account>("accounts");
         }
-
-        public List<Account> Get() =>
-            _books.Find(Account => true).ToList();
+ 
+        public Account Get() =>
+            _books.Find(Account => true).FirstOrDefault();
 
 
     }
