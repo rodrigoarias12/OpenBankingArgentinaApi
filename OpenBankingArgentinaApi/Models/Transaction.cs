@@ -1,24 +1,48 @@
 ﻿
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-
+using Newtonsoft.Json.Converters;
 namespace OpenBankingArgentinaApi.Models
 {
-
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
-
-    public class ThisAccount
+    public class Transaction
     {
-        public string this_id { get; set; }
-        public string bank { get; set; }
-
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+        public ThisAccount this_account { get; set; }
+        public OtherAccount other_account { get; set; }
+        public Details details { get; set; }
     }
-    public class Counterparty
+    public partial class ThisAccount
     {
-        public string name { get; set; }
+        [JsonProperty("id")]
+        public string id_this { get; set; }
 
+        [JsonProperty("bank_routing")]
+        public Routing BankRouting { get; set; }
+
+        [JsonProperty("account_routings")]
+        public Routing[] AccountRoutings { get; set; }
+    }
+    public partial class OtherAccount
+    {
+        [JsonProperty("id")]
+        public string id_other { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("id_type")]
+        public string IdType { get; set; }
+
+        [JsonProperty("bank_routing")]
+        public Routing BankRouting { get; set; }
+
+        [JsonProperty("account_routings")]
+        public Routing[] AccountRoutings { get; set; }
     }
     public class Details
     {
@@ -26,22 +50,23 @@ namespace OpenBankingArgentinaApi.Models
         public string description { get; set; }
         public DateTime posted { get; set; }
         public DateTime completed { get; set; }
-        public string new_balance { get; set; }
-        public string value { get; set; }
+        public Value new_balance { get; set; }
+        public Value value { get; set; }
     }
-
-    public class Transaction
+    public partial class Routing
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-        public ThisAccount this_account { get; set; }
-        public Counterparty counterparty { get; set; }
-        public Details details { get; set; }
+        [JsonProperty("scheme")]
+        public string Scheme { get; set; }
+
+        [JsonProperty("address")]
+        public string Address { get; set; }
     }
-
-    public class Transactions
+    public partial class Value
     {
-        public List<Transaction> transactions { get; set; }
+        [JsonProperty("currency")]
+        public string Currency { get; set; }
+
+        [JsonProperty("amount")]
+        public string Amount { get; set; }
     }
 }
