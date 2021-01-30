@@ -12,8 +12,7 @@ namespace OpenBankingArgentinaApi.Models
     public class Owner
     {
 
-        public string id { get; set; }
-        public string provider { get; set; }
+        public string id_owner { get; set; }
         public string display_name { get; set; }
     }
 
@@ -61,7 +60,7 @@ namespace OpenBankingArgentinaApi.Models
         public string label { get; set; }
         [JsonProperty("Numero de cuenta")]
         public string number { get; set; }
-        //public Dictionary<string,Owner> owners { get; set; }
+        public List<Owner> owners { get; set; }
         public string product_code { get; set; }
         public Balance balance { get; set; }
         public string bank_id { get; set; }

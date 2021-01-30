@@ -18,31 +18,29 @@ namespace OpenBankingArgentinaApi.Models
     }
     public partial class ThisAccount
     {
-        [JsonProperty("id")]
         public string id_this { get; set; }
 
         [JsonProperty("bank_routing")]
-        public Routing BankRouting { get; set; }
+        public Routing bankRouting { get; set; }
 
         [JsonProperty("account_routings")]
-        public Routing[] AccountRoutings { get; set; }
+        public Routing[] accountRoutings { get; set; }
     }
     public partial class OtherAccount
     {
-        [JsonProperty("id")]
         public string id_other { get; set; }
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string name { get; set; }
 
         [JsonProperty("id_type")]
-        public string IdType { get; set; }
+        public string idType { get; set; }
 
         [JsonProperty("bank_routing")]
-        public Routing BankRouting { get; set; }
+        public Routing bankRouting { get; set; }
 
         [JsonProperty("account_routings")]
-        public Routing[] AccountRoutings { get; set; }
+        public Routing[] accountRoutings { get; set; }
     }
     public class Details
     {
@@ -56,17 +54,17 @@ namespace OpenBankingArgentinaApi.Models
     public partial class Routing
     {
         [JsonProperty("scheme")]
-        public string Scheme { get; set; }
+        public string scheme { get; set; }
 
         [JsonProperty("address")]
-        public string Address { get; set; }
+        public string address { get; set; }
     }
     public partial class Value
     {
         [JsonProperty("currency")]
-        public string Currency { get; set; }
+        public string currency { get; set; }
 
         [JsonProperty("amount")]
-        public string Amount { get; set; }
+        public string amount { get; set; }
     }
 }
