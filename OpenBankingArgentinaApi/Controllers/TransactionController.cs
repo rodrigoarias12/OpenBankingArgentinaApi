@@ -29,12 +29,16 @@ namespace OpenBankingArgentinaApi.Controllers
         /// Get account transactions
         /// </summary>
         [HttpGet]
-        [ProducesResponseType(typeof(List<Transaction>), (int)HttpStatusCode.OK)]
+       
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public ActionResult<List<Transaction>> Get() =>
             _transactionService.Get();
-        
 
+        public ActionResult<List<Transaction>> get()
+        {
+            List<Transaction> Transacciones = _transactionService.Get();
+            return Transacciones;
+        }
 
 
     }
