@@ -65,7 +65,7 @@ namespace OpenBankingArgentinaApi.Models
         public Balance balance { get; set; }
         public string bank_id { get; set; }
         public List< AccountRouting> account_routings { get; set; }
-        public List< AccountAttribute> account_attributes { get; set; }
+      //  public List< AccountAttribute> account_attributes { get; set; }
       //  public List<Tag> tags { get; set; }
     }
 }

@@ -7,6 +7,10 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Converters;
 namespace OpenBankingArgentinaApi.Models
 {
+    public class ResponseDTOTransactions { 
+    public List<Transaction> transactions { get; set; }
+    }
+
     public class Transaction
     {
         [BsonId]
